@@ -109,12 +109,14 @@ export function MyContextProvider({children}) {
         setStatus('');
         console.log(name,email,password);
 
-    let newUser = {
-        name: name,
-        email: email,
-        password: password,
-      };
-      setUsers(() => users.concat(newUser));
+        
+        // envio de datos a AllData
+            let newUser = {
+                name: name,
+                email: email,
+                password: password,
+              };
+              setUsers(() => users.concat(newUser));
 
       AlertCuentaCreada();
       setShow(false);
@@ -152,9 +154,8 @@ export function MyContextProvider({children}) {
         }
 //-------------------------------------------------------------------------------
 
-
-
-
+    
+    
 //   //FORMULARIO DE DEPOSITO Y RETIRO
 // DEPOSITO
     const [deposit, setDeposit] = useState('');
@@ -319,7 +320,7 @@ export function MyContextProvider({children}) {
                     }
                 );
 
-                      //all withdrawals, for "All Data"
+                //envio de datos al AllData
                     let newWithdraw = {
                         withdraw: withdraw,
                     };
