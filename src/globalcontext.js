@@ -205,11 +205,10 @@ export function MyContextProvider({children}) {
                     }
                 );
 
-                //all new deposits for "All Data"
+                //envio de datos al AllData
                 let newDeposit = {
                     deposit: deposit,
                 };
-            
                 setDepositArr((depositArr) => depositArr.concat(newDeposit));
 
             } else if (result.isDenied) {
